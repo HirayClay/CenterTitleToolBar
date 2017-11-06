@@ -3,4 +3,4 @@ a simple customized ToolBar that layout title in center
 
 ### Shot
 
-<img src="centertoolbar_shot.png"/>
+<img src="static/centertoolbar_shot.png"/>
