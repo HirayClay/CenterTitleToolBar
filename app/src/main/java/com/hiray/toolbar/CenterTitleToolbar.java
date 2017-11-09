@@ -31,18 +31,18 @@ public class CenterTitleToolbar extends Toolbar {
     }
 
     public CenterTitleToolbar(Context context, @Nullable AttributeSet attrs) {
-        this(context, attrs, android.support.v7.appcompat.R.attr.toolbarStyle);
+        this(context, attrs, R.attr.toolbarStyle);
     }
 
     @SuppressLint("PrivateResource")
     private void init(Context context, AttributeSet attrs, int defStyleAttr) {
         super.setTitle(null);
-        TypedArray a = context.obtainStyledAttributes(attrs, android.support.v7.appcompat.R.styleable.Toolbar, defStyleAttr, 0);
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.Toolbar, defStyleAttr, 0);
         // same as ToolBar's default color
-        int titleTextColor = a.getColor(android.support.v7.appcompat.R.styleable.Toolbar_titleTextColor, 0xffffffff);
+        int titleTextColor = a.getColor(R.styleable.Toolbar_titleTextColor, 0xffffffff);
         //fetch the customized TextAppearance
-        int appearance = a.getResourceId(android.support.v7.appcompat.R.styleable.Toolbar_titleTextAppearance, 0);
-        String title = a.getString(android.support.v7.appcompat.R.styleable.Toolbar_title);
+        int appearance = a.getResourceId(R.styleable.Toolbar_titleTextAppearance, 0);
+        String title = a.getString(R.styleable.Toolbar_title);
         a.recycle();
         titleTextView = new AppCompatTextView(context);
         LayoutParams layoutParams = new LayoutParams(WRAP_CONTENT, WRAP_CONTENT);
@@ -54,7 +54,7 @@ public class CenterTitleToolbar extends Toolbar {
         if (appearance != 0)
             titleTextView.setTextAppearance(context, appearance);
         else
-            titleTextView.setTextAppearance(context, android.support.v7.appcompat.R.style.TextAppearance_AppCompat_Title);
+            titleTextView.setTextAppearance(context, R.style.TextAppearance_AppCompat_Title);
         addView(titleTextView);
     }
 
